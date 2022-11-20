@@ -1,0 +1,42 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+
+<!-- Content for the Add page -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-offset-3 cold-md-6">
+      <h1><%= title %></h1>
+      <form class="form" method="POST">
+        <div class="form-group">
+          <label for="nameTextField" class="text-gradient">Assessment</label>
+          <input type="text" class="form-control" id="nameTextField" placeholder="Enter the Name of the Assessment" name="assessment" required>
+        </div>
+
+        <div class="form-group">
+          <label for="authorTextField">Deadline</label>
+          <input type="text" class="form-control" id="authorTextField" placeholder="Enter the deadline" name="author" required>
+        </div>
+
+        <div class="form-group">
+          <label for="publishedTextField">Class</label>
+          <input type="text" class="form-control" id="publishedTextField" placeholder="Enter the name of the class" name="published" required>
+        </div>
+
+        <div class="form-group">
+          <label for="descTextField">Description</label>
+          <textarea type="text" class="form-control" id="descTextField" placeholder="Enter the Description of how you are going to study" name="description" required></textarea>
+        </div>
+
+        <br>
+        <button class="btn-btn-primary" type="submit">
+          <i class="fas fa-pencil-alt"></i> Submit </button>
+
+        <a href="/schedule-list" class="btn btn-warning">
+          <i class="fas fa-undo"></i>Cancel</a>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include ../partials/bottom_nav.ejs %>
+<%- include ../partials/footer.ejs %>
